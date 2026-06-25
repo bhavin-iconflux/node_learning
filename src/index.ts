@@ -90,10 +90,21 @@ const employeeData = {
   ],
 };
 printEmployee();
+addSkill("TypeScript");
+getTotalSkills();
+printEmployee();
 function printEmployee() {
     console.log(`ID: ${employeeData.id}`);
     console.log('After Add new skill:', skills);
     console.log(`Name: ${employeeData.name}`);
     console.log(`Experience: ${employeeData.experience}`);
     console.log(`Skills: ${employeeData.skills.join(", ")}`);
+}
+
+function addSkill(skill: string) {
+    employeeData.skills.push(skill);
+}
+
+function getTotalSkills(): number {
+    return employeeData.skills.length;
 }
